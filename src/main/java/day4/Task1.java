@@ -28,7 +28,7 @@ public class Task1 {
             if (numbers[q] % 2 == 0) {
                 even++;
             }
-            if (numbers[q] % 2 != 0) {
+            else if (numbers[q] % 2 != 0) {
                 noEven++;
             }
         }

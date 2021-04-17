@@ -10,7 +10,7 @@ public class Task1 {
             System.out.println("Малоэтажный дом");
         } else if (integer <= 8) {
             System.out.println("Среднеэтажный дом");
-        } else if (integer >= 9){
+        } else {
             System.out.println("Многоэтажный дом");
         }
     }

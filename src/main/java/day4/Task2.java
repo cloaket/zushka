@@ -18,37 +18,32 @@ public class Task2 {
         System.out.print(Arrays.toString(array));
         System.out.println();
 
-        int number = 0;
+        int max = 0;
         for (int y:array) {
-            if (y > number)
-                number = y;
+            if (y > max)
+                max = y;
         }
 
-        System.out.println(number);
+        System.out.println(max);
 
-        int number2 = 10000;
+        int min = 10000;
         for (int y:array) {
-            if (y < number2)
-                number2 = y;
+            if (y < min)
+                min = y;
         }
 
-        System.out.println(number2);
+        System.out.println(min);
 
         int number3 = 0;
+        int number4 = 0;
         for (int y:array) {
             if (y % 10 == 0) {
                 number3++;
+                number4 = number4 + y;
             }
         }
 
         System.out.println(number3);
-
-        int number4 = 0;
-        for (int y:array) {
-            if (y % 10 == 0) {
-                number4 = number4 + y;
-            }
-        }
 
         System.out.println(number4);
 
