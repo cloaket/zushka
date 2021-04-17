@@ -5,14 +5,12 @@
 
 package day5;
 
-
 public class Task2 {
     public static void main(String[] args) {
-        Motorbike motorbike = new Motorbike("Yamaha", "Super Soco TC", 1994);
-        motorbike.getColor();
-        motorbike.getModel();
-        motorbike.getYear();
-
+        Motorbike motorbike = new Motorbike();
+        System.out.println(motorbike.getColor());
+        System.out.println(motorbike.getModel());
+        System.out.println(motorbike.getYear());
     }
 }
 
@@ -21,12 +19,11 @@ class  Motorbike {
     private String model;
     private int year;
 
-    public Motorbike(String yamaha, String super_soco_tc, int i) {
-        System.out.println("Конструктор");
+    public Motorbike() {
+        System.out.println("Конструктор 1-го байка");
         this.color = "black";
         this.model = "Super Soco TC";
         this.year = 1994;
-
     }
 
     public String getColor() {
