@@ -25,22 +25,35 @@ package day7;
 //        Вызвать метод info().
 //        При попытке создать 7,8 … n игрока, количество игроков на поле меняться не должно, проверить это.
 
-import java.util.Random;
+public class Player {
+    private int stamina;
+    private final static int MAX_STAMINA = 100;
+    private final static int MIN_STAMINA = 0;
+    private static int countPlayer;
 
-public class Task2 {
-    public static void main(String[] args) {
-        Random random = new Random();
-        Player player1 = new Player(90 + random.nextInt(100 - 90));
-        Player player2 = new Player(90 + random.nextInt(100 - 90));
-        Player player3 = new Player(90 + random.nextInt(100 - 90));
-        Player player4 = new Player(90 + random.nextInt(100 - 90));
-        Player player5 = new Player(90 + random.nextInt(100 - 90));
-        Player.info();
-        Player player6 = new Player(90 + random.nextInt(100 - 90));
-        Player.info();
-        Player player7 = new Player(90 + random.nextInt(100 - 90));
-        Player.info();
-        Player player8 = new Player(90 + random.nextInt(100 - 90));
-        Player.info();
+    public Player(int stamina) {
+        this.stamina = stamina;
+        if (countPlayer < 6)
+            countPlayer++;
     }
+
+    public void run() {
+        if (stamina == 0)
+            return;
+
+        stamina--;
+
+        if (stamina == 0)
+            countPlayer--;
+    }
+
+    public static void info() {
+        if (countPlayer < 6) {
+            System.out.println("Команды неполные. На поле еще есть " + (6 - countPlayer) + " свободных мест");
+        } else {
+            System.out.println("На поле нет свободных мест");
+        }
+
+    }
+
 }
